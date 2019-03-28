@@ -1,0 +1,115 @@
+// 公共css放这里
+// mixin 详见 ../mixins/index.scss
+// reset样式
+// @include oReset();
+// fs 12 to 40px; eg: fs-12 fs-16
+@include oFsSet();
+// pd mg 5 to 60 ltbr;  pd-t5 pd-r5 pd-b5 pd-r5: 上右下左   mg-f5:各个方向 mg-x5: x轴方向 mg-y5: y轴方向
+@include oPdMgSet(12, 5);
+// pd mg 8 ltbr eg: pd-l8 pd-l16 pd-l24 pd-l36
+@include oPdMgSet(4, 8);
+// rate:15 rotate 0 to 360 eg: rot-90
+@include oRotate();
+// flex相关
+@include oFlex();
+// 超过n行后显示... eg:text-line-1 2 3
+@include oTextLine(3);
+// 移动端1px处理
+@include oBorder1px($border);
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+// display
+.d-i {
+  display: inline;
+}
+.d-i-b {
+  display: inline-block;
+}
+.d-b {
+  display: block;
+}
+// 清除浮动
+.c-b {
+  @include iCB();
+}
+
+// overflow
+%of-a,
+.of-a {
+  overflow: auto;
+  // 移动端
+  -webkit-overflow-scrolling: touch;
+}
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @extend %of-a;
+  background-color: #fff;
+}
+
+.of-h {
+  overflow: hidden;
+}
+// 白色背景
+.bg-w {
+  background-color: #fff;
+}
+// 宽度100%
+.full-w {
+  width: 100%;
+}
+
+// 高度100%
+.full-h {
+  height: 100%;
+}
+
+// 对齐方式
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+// 换行
+.w-b {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+// position
+.p-r {
+  position: relative;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.p-f {
+  position: fixed;
+}
+
+// 加粗
+.b {
+  font-weight: bold;
+}
+
+// 点击效果
+.tap {
+  transition: 400ms;
+  &:active {
+    transition: 0;
+    background-color: #d9d9d9;
+  }
+}

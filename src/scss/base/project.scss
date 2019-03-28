@@ -1,0 +1,16 @@
+// 项目公共scss
+page {
+  background-color: #fff;
+}
+image {
+  max-width: 100%;
+}
+input,
+textarea {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+button[type='theme'] {
+  color: #fff;
+  @include iBtnBgColor($theme);
+}
