@@ -5,7 +5,7 @@
   .f-1px {
     position: relative;
     &:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       top: 0;
@@ -20,7 +20,7 @@
   .t-1px {
     position: relative;
     &:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       top: 0;
@@ -35,7 +35,7 @@
   .b-1px {
     position: relative;
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -50,7 +50,7 @@
   .l-1px {
     position: relative;
     &:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       top: 0;
@@ -65,7 +65,7 @@
   .r-1px {
     position: relative;
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       right: 0;
       top: 0;
@@ -80,7 +80,7 @@
   .x-1px {
     position: relative;
     &:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       top: 0;
@@ -92,7 +92,7 @@
       transform: scaleX(0.5);
     }
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       right: 0;
       top: 0;
@@ -107,7 +107,7 @@
   .y-1px {
     position: relative;
     &:before {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       top: 0;
@@ -119,7 +119,7 @@
       transform: scaleY(0.5);
     }
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -251,27 +251,6 @@
 /**
 * [默认btn样式]
 */
-@mixin oBtn {
-  .btn {
-    position: relative;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 14px;
-    padding-right: 14px;
-    box-sizing: border-box;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    line-height: 2.5;
-    border-radius: 5px;
-    -webkit-tap-highlight-color: transparent;
-    overflow: hidden;
-    color: #000000;
-    background-color: #f8f8f8;
-    @include iBtnBgColor(#f8f8f8);
-  }
-}
 
 /**
 * [iCB clear both清除浮动]
@@ -283,13 +262,13 @@
   @if $old {
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: table;
       font: 0/0 a;
     }
   } @else {
     &:after {
-      content: '';
+      content: "";
       display: block;
       clear: both;
     }
@@ -499,7 +478,7 @@
     margin: 0;
     -webkit-tap-highlight-color: transparent;
   }
-  input[type='button'] {
+  input[type="button"] {
     -webkit-appearance: none;
     outline: none;
   }
@@ -518,7 +497,7 @@
   blockquote:after,
   q:before,
   q:after {
-    content: '';
+    content: "";
     content: none;
   }
   /* remember to define focus styles! */
@@ -544,5 +523,26 @@
   }
   a {
     text-decoration: unset;
+  }
+}
+@mixin oBtn {
+  .btn {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.5;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: #000000;
+    background-color: #f8f8f8;
+    @include iBtnBgColor(#f8f8f8);
   }
 }

@@ -1,3 +1,5 @@
+@import "../mixins/index";
+@import "../variables/index";
 // 项目公共scss
 page {
   background-color: #fff;
@@ -10,7 +12,7 @@ textarea {
   word-wrap: break-word;
   word-break: break-all;
 }
-button[type='theme'] {
+button[type="theme"] {
   color: #fff;
   @include iBtnBgColor($theme);
 }

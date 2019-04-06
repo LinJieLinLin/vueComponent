@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
-    <img width="25%" src="./assets/logo.png">
-    <HelloWorld class="mg-t40"/>
-  </div>
+  <div id="app"><router-view class="page" /></div>
 </template>
 
 <script>
